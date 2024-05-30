@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Roles {
+  ADMININISTRADOR
+}
+
+enum Status {
+  ATIVO
+  INATIVO
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(255)
+  login     String   @unique @db.VarChar(255)
+  password  String   @db.VarChar(255)
+  createdAt DateTime @default(now())
+  status    Status   @default(ATIVO)
+  role      Roles
+
+  @@map("USER")
+}
+
+model Vehicle {
+  id             Int    @id @default(autoincrement())
+  brand          String @db.VarChar(255)
+  name           String @db.VarChar(255)
+  price          Float
+  specifications String @db.VarChar(255)
+  km             String @db.VarChar(255)
+  year           String @db.VarChar(255)
+  image          String @db.VarChar(255)
+  color          String @db.VarChar(255)
+  fuel           String @db.VarChar(255)
+  fuelUrban      String @db.VarChar(255)
+  fuelRoad       String @db.VarChar(255)
+  dataSheet      String @db.VarChar(255)
+  status         Status @default(ATIVO)
+
+  @@map("VEHICLE")
+}
