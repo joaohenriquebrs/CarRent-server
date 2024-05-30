@@ -1,4 +1,4 @@
-# Catálogo de Carros
+# Catálogo de Carros server
 
 ## Front-end
 - #### Repository: https://github.com/joaohenriquebrs/CarRent-client.git
@@ -23,25 +23,31 @@ npm install
 # or
 yarn install
 ```
-4. Install Nest CLI globally
+4. Create .env 
+```bash
+cp .env.example .env
+# and
+Edit the .env file and update DATABASE_URL with your database URL
+```
+5. Install Nest CLI globally
 ```bash
 npm install -g @nest/cli
 # or 
 yarn global add @nestjs/cli
 ```
-5. Run Prisma migrations
+6. Run Prisma migrations
 ```bash
 npx prisma migrate dev
 # or 
 yarn prisma migrate dev
 ```
-6. Populate the database with initial vehicles and create a default admin
+7. Populate the database with initial vehicles and create a default admin
 ```bash
 npm run seed
 # or
 yarn run seed
 ```
-7. Start the development server
+8. Start the development server
 ```bash
 npm run dev
 # or

@@ -1,10 +1,4 @@
-import { classes } from '@automapper/classes';
-import {
-  CamelCaseNamingConvention,
-  SnakeCaseNamingConvention,
-} from '@automapper/core';
-import { AutomapperModule } from '@automapper/nestjs';
-import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { APP_FILTER, APP_GUARD } from '@nestjs/core';
 import { JwtModule } from '@nestjs/jwt';
@@ -33,4 +27,4 @@ import { HttpExceptionFilter } from './utils/exception-filter';
     PrismaModule,
   ],
 })
-export class AppModule {}
+export class AppModule { }
