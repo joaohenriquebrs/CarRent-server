@@ -21,6 +21,7 @@ export class VehiclesRepository {
       whereInput.push({
         name: {
           contains: filter.search,
+          mode: 'insensitive'
         },
       });
     }

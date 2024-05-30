@@ -1,9 +1,11 @@
-import { IsNotEmpty } from 'class-validator';
+import { IsNotEmpty, MaxLength } from 'class-validator';
+
 
 export class VehicleDto {
   @IsNotEmpty({
     message: 'O campo brand é obrigatório',
   })
+  @MaxLength(255, { message: 'o campo brand excedeu o limite de caracteres' })
   brand: string;
 
   @IsNotEmpty({

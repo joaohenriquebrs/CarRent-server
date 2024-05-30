@@ -33,6 +33,7 @@ export class VehiclesController {
   }
 
   @Get(':id')
+  @IsPublic()
   public async getVehicle(@Res() response: Response, @Param('id') id: number) {
     return response
       .status(HttpStatus.OK)
