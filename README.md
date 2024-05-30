@@ -6,6 +6,7 @@
 ## Tools
 - Node
 - Express
+- Typescript
 - Nest
 - Prisma
 - Postgres
