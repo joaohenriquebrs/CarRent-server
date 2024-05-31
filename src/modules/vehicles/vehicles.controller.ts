@@ -15,7 +15,7 @@ import { FilterPrisma } from 'src/utils/filter-request';
 
 import { VehicleDto } from './dto/vehicle-dto';
 import { VehiclesService } from './vehicles.service';
-import { IsPublic } from 'src/auth/decorators/is-public.decorator';
+import { IsPublic } from 'src/modules/auth/decorators/is-public.decorator';
 
 @Controller('vehicle')
 export class VehiclesController {
